@@ -1,0 +1,9 @@
+{% set video = block.video.one() %}
+
+{% if video is not empty %}
+  <div class="block block-video">
+    <video controls>
+      <source src="{{ video.url }}" type="video/{{ video.extension }}">
+    </video>
+  </div>
+{% endif %}

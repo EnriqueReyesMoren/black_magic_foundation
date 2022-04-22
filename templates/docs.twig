@@ -1,0 +1,16 @@
+{% extends "_/partials/main" %}
+
+{% set bodyClass = 'docs' %}
+{% set entries = craft.entries()
+  .section('docs')
+  .all()  %}
+
+{% block content %}
+  {% for entry in entries %}
+    {% set blocks = entry.blocks.all() %}
+
+    {% for block in blocks %}
+      {% include "_/matrix/" ~ block.type ignore missing %}
+    {% endfor %}
+  {% endfor %}
+{% endblock %}
