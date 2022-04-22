@@ -1,13 +1,27 @@
-dateModified: 1650655226
+dateModified: 1650657659
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: 'Foundation Site'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0b797197-2780-406a-a3ac-2651f463ac74: Blockquote # Blockquote
+    0c9da4ed-c32a-4005-adb2-8af66b613d8e: Blocks # Blocks
+    3b53818e-db5e-40fe-a966-f84478128b5d: Text # Text
+    5bc99274-d138-4da9-9a81-b4ca97e30012: Video # Video
+    7aceaed4-2bfc-4a10-8283-035b91e2f8c2: Default # Default
+    53e09cb7-c7ae-472e-bd5c-2cc7d65dee0e: Media # Media
+    85bb94ac-ee0b-44f4-881a-a00190595a35: Code # Code
+    89a9bf71-5d7f-41de-9bda-98b30337a1a6: Text # Text
     310cbb9c-a852-47b6-a6a9-ffc29afeab1f: 'Black Magic Docs' # Black Magic Docs
+    79036237-60bd-4a7a-b558-05776ab2f208: Docs # Docs
+    abf5b55d-598e-462f-b045-82a72d9925be: Blockquote # Blockquote
     b88f9c1f-f1ff-4f44-a64f-9db2ab43a9bd: Common # Common
+    b1772479-93cf-472e-844a-9969f822491c: Video # Video
     c3cd35fb-d5dd-487b-84fa-ccc84aecff94: 'Black Magic Docs' # Black Magic Docs
+    d8abe207-76dd-4308-95f3-b623080169a6: Image # Image
+    e9b20bdd-5ca0-48f1-8a6f-08f2cc9fa3ad: Code # Code
+    fba99691-a856-4400-8a12-f504c60b3059: Image # Image
 plugins:
   cloner:
     edition: standard
