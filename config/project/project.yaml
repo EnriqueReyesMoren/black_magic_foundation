@@ -1,4 +1,4 @@
-dateModified: 1650657659
+dateModified: 1650663539
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: 'Foundation Site'
@@ -15,12 +15,14 @@ meta:
     89a9bf71-5d7f-41de-9bda-98b30337a1a6: Text # Text
     310cbb9c-a852-47b6-a6a9-ffc29afeab1f: 'Black Magic Docs' # Black Magic Docs
     79036237-60bd-4a7a-b558-05776ab2f208: Docs # Docs
+    a45d9373-bc4f-4ddd-93ca-d5bfdcd95e9a: Caption # Caption
     abf5b55d-598e-462f-b045-82a72d9925be: Blockquote # Blockquote
     b88f9c1f-f1ff-4f44-a64f-9db2ab43a9bd: Common # Common
     b1772479-93cf-472e-844a-9969f822491c: Video # Video
     c3cd35fb-d5dd-487b-84fa-ccc84aecff94: 'Black Magic Docs' # Black Magic Docs
     d8abe207-76dd-4308-95f3-b623080169a6: Image # Image
     e9b20bdd-5ca0-48f1-8a6f-08f2cc9fa3ad: Code # Code
+    f67e2256-059c-443f-8808-6e34d72084cb: Caption # Caption
     fba99691-a856-4400-8a12-f504c60b3059: Image # Image
 plugins:
   cloner:
