@@ -12,7 +12,95 @@
   ],
   "plugins": [
     "fullscreen",
-    "video"
+    "video",
+    "alignment",
+    "properties",
+    "specialchars",
+    "beyondgrammar",
+    "textdirection",
+    "variable",
+    "limiter",
+    "linkattr",
+    "counter"
+  ],
+  "linkAttrs": [
+    {
+      "label": "Class",
+      "attr": "class",
+      "type": "enum",
+      "options": [
+        {
+          "name": "Primary Button",
+          "value": "button primary-button"
+        },
+        {
+          "name": "Secondary Button",
+          "value": "button secondary-button"
+        }
+      ]
+    }
+  ],
+  "formattingAdd": {
+    "main-title": {
+      "title": "Main Title",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h2",
+        "attr": {
+          "class": "h1 main-title"
+        },
+        "type": "set"
+      }
+    },
+    "secondary-title": {
+      "title": "Secondary Title",
+      "api": "module.block.format",
+      "args": {
+        "attr": {
+          "class": "secondary-title"
+        },
+        "type": "add"
+      }
+    },
+    "open-modal-attr": {
+      "title": "Open Modal Attr",
+      "api": "module.block.format",
+      "args": {
+        "attr": {
+          "data-a11y-dialog-show": "modal-container"
+        },
+        "type": "toggle"
+      }
+    },
+    "remove-open-modal-attr": {
+      "title": "Remove Open Modal Attr",
+      "api": "module.block.format",
+      "args": {
+        "data-a11y-dialog-show": "modal-container",
+        "type": "remove"
+      }
+    },
+    "small-text": {
+      "title": "Small Text",
+      "api": "module.block.format",
+      "args": {
+        "attr": {
+          "class": "text_small"
+        },
+        "add": "toogle"
+      }
+    },
+    "remove-small-text": {
+      "title": "Remove Small Text",
+      "api": "module.block.format",
+      "args": {
+        "class": "text_small",
+        "type": "remove"
+      }
+    }
+  },
+  "formattingHide": [
+    "h1"
   ],
   "linkNewTab": true,
   "toolbarFixed": true

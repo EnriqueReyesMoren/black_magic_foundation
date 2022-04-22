@@ -1,0 +1,11 @@
+{
+  "buttons": [
+    "html"
+  ],
+  "dragUpload": false,
+  "pastePlainText": true,
+  "paragraphize": false,
+  "replaceDivs": false,
+  "linebreaks": true,
+  "enterKey": false
+}
