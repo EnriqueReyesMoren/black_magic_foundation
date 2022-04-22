@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: false
+handle: docs
+name: Docs
+propagationMethod: all
+siteSettings:
+  310cbb9c-a852-47b6-a6a9-ffc29afeab1f: # Black Magic Docs
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 13d52a93-bf4e-464b-9354-12d2ec9a31e2
+type: structure
