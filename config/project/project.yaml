@@ -1,0 +1,62 @@
+dateModified: 1650655226
+email:
+  fromEmail: anuar@heyblackmagic.com
+  fromName: 'Foundation Site'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    310cbb9c-a852-47b6-a6a9-ffc29afeab1f: 'Black Magic Docs' # Black Magic Docs
+    b88f9c1f-f1ff-4f44-a64f-9db2ab43a9bd: Common # Common
+    c3cd35fb-d5dd-487b-84fa-ccc84aecff94: 'Black Magic Docs' # Black Magic Docs
+plugins:
+  cloner:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: BOM0N2MVOKR17J0P9Z9RI14G
+    schemaVersion: 1.0.21
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: F5NWMPTL8QF1W2CFGQR504TB
+    schemaVersion: 2.13.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+system:
+  edition: solo
+  live: true
+  name: 'Black Magic Docs'
+  retryDuration: null
+  schemaVersion: 3.7.33
+  timeZone: America/Mexico_City
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
