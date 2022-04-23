@@ -37,6 +37,19 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 4d13e91e-2531-45c9-859c-42674703eac9 # Update
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Update
+        sortOrder: 2
 handle: default
 hasTitleField: true
 name: Default

@@ -3,7 +3,24 @@
 <section id="idocs_{{ entry.slug }}" class="parent-section">
   {% if entry.type == 'default' %}
     <h2 {% if entry.hasDescendants %}class="parent-title"{% endif %}>{{ entry.title }}</h2>
+    
+    <div class="section-data">
+      <p>
+        <span><strong>Post date:</strong> <time datetime="{{ entry.postDate|date('long') }}">{{ entry.postDate|date('medium') }}</time></span>
+        {% if entry.update is not empty %}
+        <span><strong>Post update:</strong> <time datetime="{{ entry.dateUpdated|date('long') }}">{{ entry.dateUpdated|date('medium') }}</time></span>
+        {% endif %}
+      </p>
+    </div>
+    {% if entry.update is not empty %}
+    <div class="section-update-note">
+      <p class="update-note-title"><strong>Update note:</strong></p>
+      {{ entry.update }}
+    </div>
+    {% endif %}
   {% endif %}
+
+  
 
   {% for block in blocks %}
     {% include "_/matrix/" ~ block.type ignore missing with { block: block } %}
@@ -19,6 +36,21 @@
     {% set blocks = entry.blocks.all() %}
     <section id="idocs_{{ entry.slug }}" class="child-section">
       <h2 class="child-title">{{ entry.title }}</h2>
+
+      <div class="section-data">
+        <p>
+          <span><strong>Post date:</strong> <time datetime="{{ entry.postDate|date('long') }}">{{ entry.postDate|date('medium') }}</time></span>
+          {% if entry.update is not empty %}
+          <span><strong>Post update:</strong> <time datetime="{{ entry.dateUpdated|date('long') }}">{{ entry.dateUpdated|date('medium') }}</time></span>
+          {% endif %}
+        </p>
+      </div>
+      {% if entry.update is not empty %}
+      <div class="section-update-note">
+        <p class="update-note-title"><strong>Update note:</strong></p>
+        {{ entry.update }}
+      </div>
+      {% endif %}
 
       {% for block in blocks %}
         {% include "_/matrix/" ~ block.type ignore missing with { block: block } %}
