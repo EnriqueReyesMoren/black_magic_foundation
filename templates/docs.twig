@@ -8,11 +8,23 @@
 {% block main %}
   {% include "_/layout/header" %}
   <div id="content" role="main">
-    {% include "_/layout/sidebar" %}
+    {% include "_/layout/sidebar" ignore missing with { docs: entries } only %}
   
+  
+  {% if entries is not empty %}
+    <div class="idocs-content">
+      <div class="container">
+        {% for entry in entries %}
+          {% include "_/layout/section" ignore missing with { doc: entry } only %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
   {% if entries is not empty %}
     {% include "_/layout/content" %}
   {% endif %}
+
   </div>
 {% include "_/layout/footer" %}
 

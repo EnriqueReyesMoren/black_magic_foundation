@@ -1,4 +1,24 @@
 <div class="idocs-navigation bg-light">
+	{% if docs is not empty %}
+		<ul class="nav flex-column">
+			{% for doc in docs %}
+				<li class="nav-item">
+					<a href="#idocs_{{ doc.slug }}" class="nav-link">{{ doc.title }}</a>
+					{# {% set childDocs = doc.level('2').all() %} #}
+					{# {% if childDocs is not empty %}
+						<ul class="nav flex-column">
+							{% for doc in childDocs %}
+								<li class="nav-item">
+									<a href="#idocs_{{ doc.slug }}" class="nav-link">{{ doc.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %} #}
+				
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 	<ul class="nav flex-column ">
 		<li class="nav-item">
 			<a class="nav-link active" href="#idocs_start">Getting Started</a>

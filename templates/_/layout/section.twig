@@ -1,0 +1,10 @@
+{% set blocks = doc.blocks.all() %}
+
+<section id="idocs_{{ doc.slug }}">
+  <h2>{{ doc.title }}</h2>
+
+  {% for block in blocks %}
+    {% include "_/matrix/" ~ block.type ignore missing with { block: block } only %}
+  {% endfor %}
+</section>
+<hr class="divider">
