@@ -6,13 +6,10 @@
     "italic",
     "unorderedlist",
     "orderedlist",
-    "link",
-    "image",
-    "video"
+    "link"
   ],
   "plugins": [
     "fullscreen",
-    "video",
     "alignment",
     "properties",
     "specialchars",
@@ -47,45 +44,6 @@
       "args": {
         "tag": "kbd",
         "type": "set"
-      }
-    },
-    "main-title": {
-      "title": "Main Title",
-      "api": "module.block.format",
-      "args": {
-        "tag": "h2",
-        "attr": {
-          "class": "h1 main-title"
-        },
-        "type": "set"
-      }
-    },
-    "secondary-title": {
-      "title": "Secondary Title",
-      "api": "module.block.format",
-      "args": {
-        "attr": {
-          "class": "secondary-title"
-        },
-        "type": "add"
-      }
-    },
-    "open-modal-attr": {
-      "title": "Open Modal Attr",
-      "api": "module.block.format",
-      "args": {
-        "attr": {
-          "data-a11y-dialog-show": "modal-container"
-        },
-        "type": "toggle"
-      }
-    },
-    "remove-open-modal-attr": {
-      "title": "Remove Open Modal Attr",
-      "api": "module.block.format",
-      "args": {
-        "data-a11y-dialog-show": "modal-container",
-        "type": "remove"
       }
     },
     "small-text": {
