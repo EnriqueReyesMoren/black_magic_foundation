@@ -1,11 +1,12 @@
-# Black Magic Foundation Site
+# Black Magic Docs Site
 
-## Overview 
-The Black Magic Foundation Site is a website developed by [Black Magic](https://heyblackmagic.com) with [Craft CMS](https://craftcms.com) and other core technologies in order to create a standard approach to common components on every website. 
+## Development Stage
 
-Of course, every development will be different and therefore it is possible that the components of this project will not fit 100% to your needs. However, the problem abstraction and thought pattern you will find in each solution is applicable and useful for any use case in the development of a Craft CMS component.  
+`npx mix watch`: Creates an instance of BrowserSync proxying to the virtual host configured in the `PRIMARY_SITE_URL` variable of the Craft CMS `.env` file. 
 
-At the same time, the Foundation Site is the standard accepted by the Black Magic development team after several years of experience successfully delivering numerous sites on Craft CMS.
+`npx mix`: Compiles and processes the `./resources` directories. The compiled files are passed to the `./public` directory. 
+
+`npx mix -p`: Compiles and processes the ./resources directories for the production environment.  
 
 ### Development Technologies
 * [Craft CMS 3](https://craftcms.com/docs/3.x/).
@@ -22,7 +23,12 @@ At the same time, the Foundation Site is the standard accepted by the Black Magi
 * [NPM](https://npmjs.com).
 
 ### Craft CMS dependencies
-* Plugin list
+* [Cloner](https://github.com/verbb/cloner).
+* [Craft Mix](https://github.com/mister-bk/craft-plugin-mix).
+* [Field Manager](https://github.com/verbb/field-manager).
+* [Minify](https://github.com/nystudio107/craft-minify).
+* [Redactor](https://github.com/craftcms/redactor).
+
 
 ### Front-End dependencies
 
