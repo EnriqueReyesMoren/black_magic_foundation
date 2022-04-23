@@ -1,16 +1,26 @@
-{% extends "_/partials/main" %}
+{% extends "_/partials/foundation" %}
 
 {% set bodyClass = 'docs' %}
 {% set entries = craft.entries()
   .section('docs')
   .all()  %}
 
-{% block content %}
-  {% for entry in entries %}
+{% block main %}
+  {% include "_/layout/header" %}
+  <div id="content" role="main">
+    {% include "_/layout/sidebar" %}
+  
+  {% if entries is not empty %}
+    {% include "_/layout/content" %}
+  {% endif %}
+  </div>
+{% include "_/layout/footer" %}
+
+  {# {% for entry in entries %}
     {% set blocks = entry.blocks.all() %}
 
     {% for block in blocks %}
       {% include "_/matrix/" ~ block.type ignore missing %}
     {% endfor %}
-  {% endfor %}
+  {% endfor %} #}
 {% endblock %}
