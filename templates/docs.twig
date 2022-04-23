@@ -3,27 +3,28 @@
 {% set bodyClass = 'docs' %}
 {% set entries = craft.entries()
   .section('docs')
+  .level('1')
   .all()  %}
 
 {% block main %}
   {% include "_/layout/header" %}
   <div id="content" role="main">
-    {% include "_/layout/sidebar" ignore missing with { docs: entries } only %}
+    {% include "_/layout/sidebar" ignore missing with { entries: entries } only %}
   
   
   {% if entries is not empty %}
     <div class="idocs-content">
       <div class="container">
         {% for entry in entries %}
-          {% include "_/layout/section" ignore missing with { doc: entry } only %}
+          {% include "_/layout/section" ignore missing with { entry: entry } only %}
         {% endfor %}
       </div>
     </div>
   {% endif %}
 
-  {% if entries is not empty %}
+  {# {% if entries is not empty %}
     {% include "_/layout/content" %}
-  {% endif %}
+  {% endif %} #}
 
   </div>
 {% include "_/layout/footer" %}

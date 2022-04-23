@@ -12,7 +12,16 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 100
+            width: 50
+          -
+            fieldUid: c932de98-0288-4c4a-8160-b0b80ea4c6a5 # Open image in a modal?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
           -
             fieldUid: a45d9373-bc4f-4ddd-93ca-d5bfdcd95e9a # Caption
             instructions: null
@@ -26,7 +35,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   a45d9373-bc4f-4ddd-93ca-d5bfdcd95e9a: # Caption
-    columnSuffix: jwlnuzmy
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -34,25 +43,32 @@ fields:
     name: Caption
     searchable: false
     settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: ''
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '1'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\fields\PlainText
+  c932de98-0288-4c4a-8160-b0b80ea4c6a5: # Open image in a modal?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: imageModal
+    instructions: ''
+    name: 'Open image in a modal?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   d8abe207-76dd-4308-95f3-b623080169a6: # Image
     columnSuffix: null
     contentColumnType: string

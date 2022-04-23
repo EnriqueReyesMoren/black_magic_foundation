@@ -1,10 +1,50 @@
-{% set blocks = doc.blocks.all() %}
+{% set blocks = entry.blocks.all() %}
 
-<section id="idocs_{{ doc.slug }}">
-  <h2>{{ doc.title }}</h2>
+<section id="idocs_{{ entry.slug }}" class="parent-section">
+  {% if entry.type == 'default' %}
+    <h2 {% if entry.hasDescendants %}class="parent-title"{% endif %}>{{ entry.title }}</h2>
+  {% endif %}
 
   {% for block in blocks %}
-    {% include "_/matrix/" ~ block.type ignore missing with { block: block } only %}
-  {% endfor %}
+    {% include "_/matrix/" ~ block.type ignore missing with { block: block } %}
+  {% endfor %}  
 </section>
-<hr class="divider">
+{% if entry.hasDescendants %}
+  <hr class="invisible-divider">
+  {% set childEntries = craft.entries()
+    .descendantOf(entry.id)
+    .all() %}
+  
+  {% for entry in childEntries %}
+    {% set blocks = entry.blocks.all() %}
+    <section id="idocs_{{ entry.slug }}" class="child-section">
+      <h2 class="child-title">{{ entry.title }}</h2>
+
+      {% for block in blocks %}
+        {% include "_/matrix/" ~ block.type ignore missing with { block: block } %}
+      {% endfor %}
+    </section>
+    {% if loop.last %}
+      <hr class="divider">
+    {% else %}
+      <hr class="invisble-divider">
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <hr class="divider">
+{% endif %}
+{# {% if entry.hasDescendants %}
+  {% set subentrys = entry.children.all() %}
+  {% for subentry in subentrys %}
+    {% set subBlocks = subentry.blocks.all() %}
+    <section id="ientrys_{{ subentry.slug }}">
+      <h2 class="child-title">{{ subentry.title }}</h2>
+
+      {% for block in subBlocks %}
+        {% include "_/matrix/" ~ block.type ignore missing with { block: block } only %}
+      {% endfor %}    
+    </section>
+  {% endfor %}
+{% else %}
+  <hr class="divider">
+{% endif %} #}

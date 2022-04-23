@@ -60,7 +60,7 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
   f67e2256-059c-443f-8808-6e34d72084cb: # Caption
-    columnSuffix: hcfjezxi
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption

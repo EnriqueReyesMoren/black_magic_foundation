@@ -41,6 +41,14 @@
     }
   ],
   "formattingAdd": {
+    "inline-code": {
+      "title": "Inline Code",
+      "api": "module.block.format",
+      "args": {
+        "tag": "kbd",
+        "type": "set"
+      }
+    },
     "main-title": {
       "title": "Main Title",
       "api": "module.block.format",

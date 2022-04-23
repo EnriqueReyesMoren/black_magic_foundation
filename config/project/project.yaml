@@ -1,4 +1,4 @@
-dateModified: 1650676453
+dateModified: 1650704461
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: 'Foundation Site'
@@ -14,12 +14,14 @@ meta:
     85bb94ac-ee0b-44f4-881a-a00190595a35: Code # Code
     89a9bf71-5d7f-41de-9bda-98b30337a1a6: Text # Text
     310cbb9c-a852-47b6-a6a9-ffc29afeab1f: 'Black Magic Docs' # Black Magic Docs
+    428f65fe-9958-4654-98a8-5a18cd762f6d: Intro # Intro
     79036237-60bd-4a7a-b558-05776ab2f208: Docs # Docs
     a45d9373-bc4f-4ddd-93ca-d5bfdcd95e9a: Caption # Caption
     abf5b55d-598e-462f-b045-82a72d9925be: Blockquote # Blockquote
     b88f9c1f-f1ff-4f44-a64f-9db2ab43a9bd: Common # Common
     b1772479-93cf-472e-844a-9969f822491c: Video # Video
     c3cd35fb-d5dd-487b-84fa-ccc84aecff94: 'Black Magic Docs' # Black Magic Docs
+    c932de98-0288-4c4a-8160-b0b80ea4c6a5: 'Open image in a modal?' # Open image in a modal?
     d8abe207-76dd-4308-95f3-b623080169a6: Image # Image
     e9b20bdd-5ca0-48f1-8a6f-08f2cc9fa3ad: Code # Code
     f67e2256-059c-443f-8808-6e34d72084cb: Caption # Caption

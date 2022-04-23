@@ -1,10 +1,21 @@
 {% if block.image.one() is not empty %}
 	<div class="block block-image">
-    <figure>
-      <img src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}">
-      {% if block.caption is not empty %}
-        <figcaption>{{ caption }}</figcaption>
-      {% endif %}
-    </figure>
+    {% if block.imageModal %}
+    <a href="{{ block.image.one().url }}" class="popup-img">
+      <figure>
+        <img src="{{ block.image.one().url }}" class="img-fluid" alt="{{ block.image.one().title }}">
+        {% if block.caption is not empty %}
+          <figcaption>{{ block.caption }}</figcaption>
+        {% endif %}
+      </figure>
+    </a>
+    {% else %}
+      <figure>
+        <img src="{{ block.image.one().url }}" class="img-fluid" alt="{{ block.image.one().title }}">
+        {% if block.caption is not empty %}
+          <figcaption>{{ block.caption }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
 	</div>
 {% endif %}
