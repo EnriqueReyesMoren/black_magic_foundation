@@ -30,3 +30,16 @@ end-script:
 >@echo All done! now commit and push to the remote repository
 >@sleep .5
 .PHONY: end-script
+
+delete-webpack:
+>@rm -rf webpack.mix.js
+>@sleep .5
+.PHONY: delete-webpack
+
+delete-nvm:
+>@rm -rf .nvmrc
+>@sleep .5
+.PHONY: delete-nvm
+
+delete: delete-webpack delete-nvm
+.PHONY: delete
