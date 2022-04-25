@@ -63,4 +63,10 @@ return [
             'restoreCommand' => App::env('RESTORE_COMMAND'),
         ],
     ],
+
+    'staging' => [
+        'aliases' => [
+            '@webroot' => dirname(__DIR__) . '/public_html',
+        ]
+    ]
 ];
