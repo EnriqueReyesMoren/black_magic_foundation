@@ -3,86 +3,35 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
   $(error This Make does not support .RECIPEPREFIX. Please use GNU Make 4.0 or later)
 endif
 .RECIPEPREFIX = >
+all: delete-ignore delete-modules delete-jsons delete-resources end-script
 
-dev:
->npx mix watch
-.PHONY: dev
+clean: all
+>@echo Preparing main repository for production deployment 
+.PHONY: clean
 
-staging:
->npx mix
-.PHONY: build
+delete-ignore:
+>@cp .gitignore.example ./.gitignore
+>@sleep .5
+.PHONY: delete-ignore
 
-plugins: nav manager cloner image-resizer freeform
-.PHONY: plugins
+delete-modules:
+>@rm -rf node_modules
+>@sleep .5
+.PHONY: delete-modules
 
-minify:
->composer require nystudio107/craft-minify
->@sleep 1
->php craft plugin/install minify
->@sleep 1
-.PHONY: minify
+delete-jsons:
+>@rm -rf package.json
+>@sleep .5
+>@rm -rf package-lock.json
+>@sleep .5
+.PHONY: delete-jsons
 
-mix:
->composer require misterbk/mix
+delete-resources:
+>@rm -rf resources
 >@sleep 1
->php craft plugin/install mix
->@sleep 1
-.PHONY: mix
+.PHONY: delete-resources
 
-redactor:
->composer require craftcms/redactor
->@sleep 1
->php craft plugin/install redactor
->@sleep 1
-.PHONY: redactor
-
-seo:
->composer require ether/seo
->@sleep 1
->php craft plugin/install seo
->@sleep 1
-.PHONY: seo
-
-neo:
->composer require spicyweb/craft-neo
->@sleep 1
->php craft plugin/install neo
->@sleep 1
-.PHONY: neo
-
-nav:
->composer require verbb/navigation
->@sleep 1
->php craft plugin/install navigation
->@sleep 1
-.PHONY: nav
-
-manager: 
->composer require verbb/field-manager
->@sleep 1
->php craft plugin/install field-manager
->@sleep 1
-.PHONY: manager
-
-cloner: 
->composer require verbb/cloner
->@sleep 1
->php craft plugin/install cloner
->@sleep 1
-.PHONY: cloner
-
-image-resizer: 
->composer require verbb/image-resizer
->@sleep 1
->php craft plugin/install image-resizer
->@sleep 1
-.PHONY: image-resizer
-
-freeform:
->composer require solspace/craft-freeform
-.PHONY: freeform
-
-rename-webroot:
->@mv -f ./web ./public
-.PHONY: rename-webroot
-
+end-script:
+>@echo All done! now commit and push to the remote repository
+>@sleep .5
+.PHONY: end-script
